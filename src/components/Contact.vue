@@ -219,42 +219,42 @@
   </section>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
+//import { ref } from "vue";
 
-const formData = ref({
-  name: "",
-  email: "",
-  message: "",
-});
+// const formData = ref({
+//   name: "",
+//   email: "",
+//   message: "",
+// });
 
-const isSubmitting = ref(false);
-const showSuccess = ref(false);
-const showError = ref(false);
+// const isSubmitting = ref(false);
+// const showSuccess = ref(false);
+// const showError = ref(false);
 
-const submitForm = async () => {
-  isSubmitting.value = true;
+// const submitForm = async () => {
+//   isSubmitting.value = true;
 
-  // Simulate form submission
-  try {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    showSuccess.value = true;
-    formData.value = { name: "", email: "", message: "" };
+//   // Simulate form submission
+//   try {
+//     await new Promise((resolve) => setTimeout(resolve, 1500));
+//     showSuccess.value = true;
+//     formData.value = { name: "", email: "", message: "" };
 
-    // Hide success message after 3 seconds
-    setTimeout(() => {
-      showSuccess.value = false;
-    }, 3000);
-  } catch (error) {
-    showError.value = true;
+//     // Hide success message after 3 seconds
+//     setTimeout(() => {
+//       showSuccess.value = false;
+//     }, 3000);
+//   } catch (error) {
+//     showError.value = true;
 
-    // Hide error message after 3 seconds
-    setTimeout(() => {
-      showError.value = false;
-    }, 3000);
-  } finally {
-    isSubmitting.value = false;
-  }
-};
+//     // Hide error message after 3 seconds
+//     setTimeout(() => {
+//       showError.value = false;
+//     }, 3000);
+//   } finally {
+//     isSubmitting.value = false;
+//   }
+// };
 </script>
 
 <style scoped>
