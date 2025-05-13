@@ -2,6 +2,8 @@
 
 Este projeto é uma landing page moderna e performática construída com as tecnologias **Vue 3**, **Composition API**, **TypeScript**, **CSS puro** e com o uso da ferramenta **Bolt** como gerador de projeto.
 
+🔗 **Acesse a landing page**: [https://jfsis.com.br](https://jfsis.com.br)
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Vue 3**: Framework progressivo para construção de interfaces.
@@ -20,3 +22,4 @@ Para começar, foi necessário instalar o Bolt CLI globalmente:
 
 ```bash
 npm install -g @bolt/core
+```
