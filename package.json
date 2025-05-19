@@ -1,28 +1,34 @@
 {
   "name": "vue-portfolio-landing",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "dev": "vite --mode dev",
+    "build": "vue-tsc && vite build --mode contabo1",
+    "contabo1": "node deploy/enviarServidor.cjs contabo1",
+    "contabo1hml": "node deploy/enviarServidor.cjs contabo1hml",
+    "preview": "vite preview --host ",
+    "host": "vite --host --mode dev",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "vue": "^3.4.38",
-    "vue-router": "^4.3.0",
-    "gsap": "^3.12.5",
     "@vueuse/core": "^10.9.0",
-    "@vueuse/motion": "^2.1.0"
+    "@vueuse/motion": "^2.1.0",
+    "axios": "^1.9.0",
+    "gsap": "^3.12.5",
+    "ssh2-sftp-client": "^12.0.0",
+    "vue": "^3.4.38",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
     "@vitejs/plugin-vue": "^5.1.3",
-    "typescript": "^5.5.3",
-    "vite": "^5.4.2",
-    "vue-tsc": "^2.1.4",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.20.1",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.14.1"
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2",
+    "vue-tsc": "^2.1.4"
   }
 }

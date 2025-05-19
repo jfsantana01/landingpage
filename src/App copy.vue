@@ -45,16 +45,16 @@
 import { ref, onMounted, watch } from "vue";
 import { usePreferredDark } from "@vueuse/core";
 
-const isDark = ref(true); // Set default theme to dark
+const isDark = ref(false);
 const isPreferredDark = usePreferredDark();
 
 onMounted(() => {
-  // Check for saved theme preference or use default dark
+  // Check for saved theme preference or use system preference
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     isDark.value = savedTheme === "dark";
   } else {
-    isDark.value = true; // Default to dark if no saved preference
+    isDark.value = isPreferredDark.value;
   }
   applyTheme();
 });
