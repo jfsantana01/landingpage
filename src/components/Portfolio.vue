@@ -2,9 +2,7 @@
   <section id="portfolio" class="section portfolio-section animate-section">
     <div class="container">
       <h2 class="section-title">Projetos em destaque</h2>
-      <p class="section-subtitle">
-        Uma seleção do meu trabalho profissional em desenvolvimento e design web
-      </p>
+      <p class="section-subtitle">Uma seleção do meu trabalho profissional em desenvolvimento e design web</p>
 
       <div class="portfolio-grid">
         <div
@@ -23,22 +21,14 @@
             <div class="portfolio-image">
               <img :src="item.image" :alt="item.title" />
               <div class="portfolio-overlay">
-                <a
-                  :href="item.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-primary"
-                  >Ver Projeto</a
-                >
+                <a :href="item.url" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver Projeto</a>
               </div>
             </div>
             <div class="portfolio-content">
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
               <div class="portfolio-tags">
-                <span v-for="(tag, index) in item.tags" :key="index">{{
-                  tag
-                }}</span>
+                <span v-for="(tag, index) in item.tags" :key="index">{{ tag }}</span>
               </div>
             </div>
           </div>
@@ -63,22 +53,21 @@ const portfolioItems = ref([
   {
     id: 3,
     title: "OneAgile",
-    description:
-      "Site corporativo da OneAgile, apresentando serviços e experiência em metodologias ágeis.",
+    description: "Site corporativo da OneAgile, apresentando serviços e experiência em metodologias ágeis.",
     image:
       "https://images.pexels.com/photos/6804091/pexels-photo-6804091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     url: "https://oneagile.com.br/",
     tags: ["Corporate", "Services", "Branding"],
   },
-  {
-    id: 1,
-    title: "My OneAgile",
-    description:
-      "Uma plataforma moderna para o gerenciamento ágil de treinamentos e a colaboração eficiente entre equipes.",
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
-    url: "https://my.oneagile.com.br/",
-    tags: ["Vue.js", "Agile", "Dashboard"],
-  },
+  // {
+  //   id: 1,
+  //   title: "My OneAgile",
+  //   description:
+  //     "Uma plataforma moderna para o gerenciamento ágil de treinamentos e a colaboração eficiente entre equipes.",
+  //   image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
+  //   url: "https://my.oneagile.com.br/",
+  //   tags: ["Vue.js", "Agile", "Dashboard"],
+  // },
 ]);
 </script>
 
